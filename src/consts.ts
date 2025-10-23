@@ -1,7 +1,7 @@
-export const SITE_OWNER = 'Sulthan Zahran';
+export const SITE_OWNER = "Sulthan Zahran Ma'ruf";
 export const SITE_TITLE = `${SITE_OWNER} · Software Engineer`;
 export const SITE_DESCRIPTION =
-	'Systems engineer specializing in analysis, automation tooling, and making complex problems visible.';
-export const SITE_GITHUB = 'https://github.com/zsult';
-export const SITE_LINKEDIN = 'https://www.linkedin.com/in/zsult';
-export const SITE_EMAIL = 'hello@zsult.dev';
+	'Software Engineer specializing in industrial automation and data processing with expertise in AMHS, real-time logistics systems, and large-scale data pipelines. Selected as AMHS specialist for international deployment to integrate production systems for new manufacturing facilities.';
+export const SITE_GITHUB = 'https://github.com/SulthanZahran91';
+export const SITE_LINKEDIN = 'https://www.linkedin.com/in/yourprofile';
+export const SITE_EMAIL = 'zsulthan9@gmail.com';

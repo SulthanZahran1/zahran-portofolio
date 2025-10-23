@@ -6,89 +6,98 @@ import { SITE_OWNER, SITE_TITLE, SITE_DESCRIPTION, SITE_GITHUB, SITE_LINKEDIN, S
 
 const featuredProjects = [
 	{
-		title: 'Systems Observer',
-		image: '/images/featured-systems-observer.svg',
-		tags: ['TypeScript', 'Astro', 'D3.js'],
+		title: 'Timing Diagram Analyzer',
+		image: '/images/featured-timing-diagram.svg',
+		tags: ['Python', 'SQL', 'Log Diagnostics'],
 		problem:
-			'Distributed telemetry was siloed across teams, making it impossible to spot regressions before they touched production.',
+			'AMHS incidents required engineers to manually reconstruct material flow from 100MB+ log files, delaying production restarts.',
 		solution:
-			'Unified all ingest streams into a visual console with anomaly detection overlays so engineers can catch issues within minutes.',
-		features: ['Live topology map with health overlays', 'Automated drift alerts for key services', 'Exportable incident timelines'],
-		github: 'https://github.com/zsult/systems-observer'
+			'Built a diagnostics tool that parses raw conveyor, AGV, and robot events into interactive timelines so integration teams can isolate faults in minutes.',
+		features: [
+			'Ingests multi-hundred MB AMHS logs and renders synchronized timelines in under two minutes',
+			'Advanced filtering to spotlight interlocks across conveyors, lifts, and vehicle fleets',
+			'Exports annotated incident reports for shift handovers and long-term RCA baselines'
+		],
+		impact:
+			'Cut incident diagnosis time from hours to minutes, directly improving 24/7 battery manufacturing throughput.',
+		github: 'https://github.com/SulthanZahran91?tab=repositories'
 	},
 	{
-		title: 'Automation Pipeline',
-		image: '/images/featured-automation-pipeline.svg',
-		tags: ['Python', 'FastAPI', 'Docker'],
+		title: 'SQL Query Dependency Visualizer',
+		image: '/images/featured-sql-visualizer.svg',
+		tags: ['Python', 'SQL Parsing', 'Graph Visualization'],
 		problem:
-			'Release operations relied on brittle scripts and manual hand-offs, breaking every time a dependency changed.',
+			'Understanding legacy analytics queries with five or more interlinked CTEs made it painful to trace how data flowed through each transformation.',
 		solution:
-			'Orchestrated parameterized pipelines with an API surface so feature teams can ship from a single command.',
-		features: ['Reusable workflow templates', 'Secrets management baked in', 'Runtime metrics surfaced to Prometheus'],
-		github: 'https://github.com/zsult/automation-pipeline'
+			'Implemented a SQL parser that maps CTE definitions and references into dependency graphs, producing instant visuals of table lineage.',
+		features: [
+			'AST-powered parser with support for nested and recursive CTE chains',
+			'Directed graph output that highlights data flow between intermediate tables',
+			'Detectors for circular dependencies and unused CTE blocks'
+		],
+		impact:
+			'Gave data teams a shared view of complex query structure, accelerating refactors and onboarding for analytics projects.',
+		github: 'https://github.com/SulthanZahran91?tab=repositories'
 	},
 	{
-		title: 'Insight Console',
-		image: '/images/featured-insight-console.svg',
-		tags: ['Rust', 'WebAssembly', 'Tailwind CSS'],
+		title: 'SEC Financial Data Extraction Pipeline',
+		image: '/images/featured-sec-pipeline.svg',
+		tags: ['Python', 'LLM Automation', 'Data Pipelines'],
 		problem:
-			'Program analysis relied on spreadsheets and screenshots that went stale before stakeholders made a decision.',
+			'Research teams were manually scraping hundreds of SEC filings to surface comparable financial metrics, consuming months of effort.',
 		solution:
-			'Delivered a zero-install console that compiles heavy data parsing to WebAssembly and streams interactive insights.',
-		features: ['High-fidelity diff visualizer', 'LLM-assisted summaries', 'Offline-ready via service workers'],
-		github: 'https://github.com/zsult/insight-console'
+			'Delivered an automated pipeline that crawls filings, extracts structured data with LLM validation, and delivers clean datasets overnight.',
+		features: [
+			'Headless crawler that processes 500+ filings (75k pages) into normalized document batches',
+			'LLM-assisted parsing with schema validation to safeguard financial metrics',
+			'Batch orchestration with monitoring hooks for fast reruns and audit trails'
+		],
+		impact:
+			'Compressed months of manual data extraction into a single nightly run, unblocking academic research timelines.',
+		github: 'https://github.com/SulthanZahran91?tab=repositories'
 	}
 ];
 
 const otherProjects = [
 	{
-		title: 'CLI Metrics',
-		image: '/images/other-cli-metrics.svg',
+		title: 'Spectroscopy Analysis & Autofitting Tool',
+		image: '/images/other-spectroscopy.svg',
 		description:
-			'Lightweight CLI that snapshots system telemetry, signs payloads, and ships deltas to a metrics lake in under 2 seconds.',
-		tags: ['Go', 'SQLite'],
-		github: 'https://github.com/zsult/cli-metrics'
+			'Automated MATLAB workflow that ingests spectroscopy scans, fits curves to spectral peaks, and calculates critical physics constants for lab teams.',
+		tags: ['MATLAB', 'Scientific Computing', 'Curve Fitting'],
+		github: 'https://github.com/SulthanZahran91?tab=repositories'
 	},
 	{
-		title: 'Log Viewer',
-		image: '/images/other-log-viewer.svg',
+		title: 'BMKG Sensor Visualization Dashboard',
+		image: '/images/other-bmkg-dashboard.svg',
 		description:
-			'Streaming log explorer with regex presets and context-aware highlights for correlated traces and events.',
-		tags: ['React', 'Tailwind'],
-		github: 'https://github.com/zsult/log-viewer'
+			'Real-time dashboard for Indonesia’s BMKG that visualizes geophysical sensor readings to highlight anomalies and emerging trends.',
+		tags: ['Python', 'Real-time Data', 'Visualization'],
+		github: 'https://github.com/SulthanZahran91?tab=repositories'
 	},
 	{
-		title: 'Config Sync',
-		image: '/images/other-config-sync.svg',
+		title: 'Temperature Sensor Signal Filter',
+		image: '/images/other-temperature-filter.svg',
 		description:
-			'Declarative config sync that observes edge environments and rolls out changes with audit trails and guardrails.',
-		tags: ['Terraform', 'TypeScript'],
-		github: 'https://github.com/zsult/config-sync'
-	},
-	{
-		title: 'Simulation Runner',
-		image: '/images/other-sim-runner.svg',
-		description:
-			'Batch simulator for scenario testing with deterministic seeding and profile exports for cross-team sharing.',
-		tags: ['Rust', 'WebAssembly'],
-		github: 'https://github.com/zsult/sim-runner'
+			'Digital filtering pipeline that denoises raw temperature sensor signals while preserving responsiveness for downstream analytics.',
+		tags: ['Digital Signal Processing', 'Filtering', 'Embedded'],
+		github: 'https://github.com/SulthanZahran91?tab=repositories'
 	}
 ];
 
 const skills = [
-	'Python',
-	'Rust',
-	'TypeScript',
-	'React',
-	'Astro',
-	'PyQt',
-	'Real-time Systems',
-	'Concurrent Programming',
-	'System Architecture',
-	'Performance Optimization',
-	'Data Analysis',
-	'Automation',
-	'LLM Integration'
+	'Automated Material Handling Systems (AMHS)',
+	'Real-Time Dispatch (RTD)',
+	'AGV & Conveyor Integration',
+	'Python (Pandas, Flask)',
+	'SQL Server & MySQL',
+	'MATLAB App Designer',
+	'Log Diagnostics & Observability',
+	'ETL & Data Pipelines',
+	'LLM Integration (LangChain)',
+	'C# / WPF Tooling',
+	'Control Systems & PLC Programming',
+	'Docker & Linux Automation'
 ];
 ---
 
@@ -102,12 +111,14 @@ const skills = [
 		<main class="page-main">
 			<section class="hero">
 				<div class="hero-copy">
-					<p class="hero-role">Software Engineer</p>
+					<p class="hero-role">AMHS & Industrial Automation Specialist</p>
 					<h1>{SITE_OWNER}</h1>
 					<p class="hero-specialty">
-						Specializing in systems analysis, tooling automation, and solving complex technical problems.
+						{SITE_DESCRIPTION}
 					</p>
-					<p class="hero-tagline">I build tools to make hard problems visible.</p>
+					<p class="hero-tagline">
+						I build diagnostic tooling and data pipelines that keep high-throughput automation and analytics systems running.
+					</p>
 					<div class="hero-actions">
 						<a class="btn btn-primary" href="#projects">View Projects</a>
 						<a class="btn btn-secondary" href={SITE_GITHUB} target="_blank" rel="noreferrer">GitHub</a>
@@ -150,6 +161,12 @@ const skills = [
 											))}
 										</ul>
 									</div>
+									{project.impact && (
+										<div>
+											<span class="label">Impact</span>
+											<p>{project.impact}</p>
+										</div>
+									)}
 								</div>
 								<a class="project-link" href={project.github} target="_blank" rel="noreferrer">
 									View on GitHub &rarr;

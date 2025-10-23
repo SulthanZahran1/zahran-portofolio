@@ -1,0 +1,13 @@
+<svg width="360" height="240" viewBox="0 0 360 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="360" height="240" rx="20" fill="#F8FAFC"/>
+  <rect x="28" y="36" width="304" height="168" rx="16" fill="#172554"/>
+  <polyline points="48,160 72,120 96,164 120,92 144,150 168,70 192,136 216,88 240,148 264,108 288,170 312,128" stroke="#38BDF8" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+  <polyline points="48,150 72,138 96,142 120,118 144,132 168,110 192,134 216,122 240,140 264,124 288,152 312,142" stroke="#FACC15" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="48,170 72,166 96,172 120,162 144,168 168,156 192,164 216,158 240,166 264,160 288,170 312,166" stroke="#1E3A8A" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+  <rect x="52" y="64" width="80" height="10" rx="5" fill="#38BDF8" opacity="0.6"/>
+  <rect x="52" y="80" width="140" height="10" rx="5" fill="#60A5FA" opacity="0.35"/>
+  <rect x="52" y="96" width="100" height="10" rx="5" fill="#22D3EE" opacity="0.35"/>
+  <rect x="52" y="194" width="180" height="12" rx="6" fill="#0EA5E9" opacity="0.8"/>
+  <rect x="52" y="212" width="132" height="12" rx="6" fill="#1D4ED8" opacity="0.8"/>
+  <rect x="196" y="212" width="96" height="12" rx="6" fill="#3B82F6" opacity="0.65"/>
+</svg>
