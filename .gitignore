@@ -200,3 +200,8 @@ dist
 
 ### Astro ###
 .astro/
+bun.lock
+src/components/BaseHead.astro
+src/components/Footer.astro
+src/components/Header.astro
+src/pages/index.astro

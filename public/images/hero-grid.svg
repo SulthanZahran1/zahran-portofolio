@@ -1,0 +1,19 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" />
+      <stop offset="1" stop-color="#f9fafb" />
+    </linearGradient>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" stroke="#2563eb" stroke-opacity="0.08" stroke-width="1" />
+      <path d="M0 40H80" stroke="#2563eb" stroke-opacity="0.05" stroke-width="0.5" />
+      <path d="M40 0V80" stroke="#2563eb" stroke-opacity="0.05" stroke-width="0.5" />
+    </pattern>
+    <mask id="fade-mask">
+      <rect width="1200" height="800" fill="url(#bg-fade)" />
+    </mask>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg-fade)" />
+  <rect width="1200" height="800" fill="url(#grid)" mask="url(#fade-mask)" />
+  <rect width="1200" height="800" fill="url(#bg-fade)" opacity="0.6" />
+</svg>
