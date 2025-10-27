@@ -1,0 +1,255 @@
+\documentclass[a4paper,11pt]{article}
+
+% Package imports
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\usepackage{fontawesome5}
+
+% Color definitions
+\definecolor{darkblue}{RGB}{0,0,139}
+\definecolor{accentcolor}{RGB}{0,102,204}
+\definecolor{sectioncolor}{RGB}{44,62,80}
+
+% Page layout
+\setlength{\multicolsep}{0pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+\setlength{\footskip}{5pt}
+
+% Hyperlink setup
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    filecolor=darkblue,
+    urlcolor=darkblue,
+}
+
+% Custom box settings
+\usepackage[most]{tcolorbox}
+\tcbset{
+    frame code={},
+    center title,
+    left=0pt,
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    colback=gray!15,
+    colframe=white,
+    width=\dimexpr\textwidth\relax,
+    enlarge left by=-2mm,
+    boxsep=4pt,
+    arc=0pt,outer arc=0pt,
+}
+
+% URL style
+\urlstyle{same}
+
+% Text alignment
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\color{sectioncolor}
+}{}{0em}{}[\color{accentcolor}\titlerule \vspace{-7pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=3.5mm,labelsep=1mm,itemsep=1mm]}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2mm}}
+
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+% Commands for icon sizing
+\newcommand{\socialicon}[1]{\raisebox{-0.05em}{\resizebox{!}{1em}{#1}}}
+
+% Font options
+\newcommand{\headerfontiii}{\fontfamily{ppl}\selectfont}
+
+\begin{document}
+\headerfontiii
+
+% Header
+\begin{center}
+    {\Huge\textbf{Sulthan Zahran Ma'ruf}}
+\end{center}
+\vspace{-6mm}
+
+\begin{center}
+    \small{
+    \socialicon{\faPhone} +62 812 9161 6145 ~|~
+    \socialicon{\faEnvelope} \href{mailto:zsulthan9@gmail.com}{zsulthan9@gmail.com} ~|~
+    \socialicon{\faGithub} \href{https://github.com/SulthanZahran91}{github.com/SulthanZahran91} ~|~
+    \socialicon{\faLinkedin} \href{https://www.linkedin.com/in/yourprofile}{LinkedIn}
+    }
+\end{center}
+\vspace{-3mm}
+
+\begin{center}
+Software Engineer specializing in industrial automation and data processing with expertise in AMHS, real-time logistics systems, and large-scale data pipelines. Selected as AMHS specialist for international deployment to integrate production systems for new manufacturing facilities.
+\end{center}
+\section{\textbf{Professional Experience}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Smart Factory Integrators/Developers - AMHS}{Karawang, Indonesia}
+{LG Sinarmas Technology Solutions (Merged from LG CNS Indonesia)}{Apr 2024 - Present}
+
+\vspace{1mm}
+\textbf{\small International Deployment - System Integration Specialist}
+\resumeItemListStart
+    \resumeItem{Selected as 1 of 4 engineers for 2-month deployment to South Korea to lead AMHS subsystem integration and testing for two new production facilities in LG ENSOL Ochang Factory.}
+    \resumeItem{Conducted comprehensive integration testing of AMHS-AGV systems (OpenTCS-based architecture) connecting real-time dispatch, material control systems, and conveyor infrastructure}
+    \resumeItem{Proactively identified and resolved 15+ potential integration issues during testing phase, preventing production delays}
+    \resumeItem{Delivered comprehensive technical training and documentation to local engineering team}
+\resumeItemListEnd
+
+\vspace{1mm}
+\textbf{\small Core Systems Development}
+\resumeItemListStart
+    \resumeItem{Develop and optimize logistics algorithms for AMHS managing thousands of concurrent material movements across 8 production lines in 24/7 battery manufacturing operations in Hyundai LG Indonesia Factory}
+    \resumeItem{Engineered production-critical diagnostic tools (Python/SQL) including a \textbf{Timing Diagram Analyzer} that processes 100MB+ log files for rapid incident analysis, reducing diagnosis time from hours to minutes}
+    \resumeItem{Built version control and static analysis suite improving development workflow and code quality for 10+ member engineering team}
+    \resumeItem{Maintain and enhance RTD (Real-Time Dispatch) logic, directly impacting production throughput and material flow efficiency}
+\resumeItemListEnd
+
+
+\resumeSubheading
+{Research Assistant, FAAN Laboratory}{Jakarta, Indonesia}
+{Universitas Indonesia}{Oct 2023 - Mar 2024}
+\resumeItemListStart
+    \resumeItem{Developed real-time spectroscopic data analysis application using MATLAB App Designer}
+    \resumeItem{Implemented signal processing algorithms for advanced spectral analysis and automated curve fitting}
+\resumeItemListEnd
+
+
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+\section{\textbf{Selected Projects}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumeProject
+{Timing Diagram Analyzer}
+{Python, SQL, Log Processing}
+{\href{https://github.com/SulthanZahran91}{GitHub}}
+{}
+\resumeItemListStart
+    \resumeItem{Production-critical diagnostic tool that processes 100MB+ log files for rapid AMHS incident analysis, enabling diagnosis in minutes versus days of manual analysis}
+    \resumeItem{Implements advanced filtering and interval analysis algorithms for complex timing relationships in distributed systems}
+\resumeItemListEnd
+
+\resumeProject
+{SEC Financial Data Extraction Pipeline}
+{Python, Gemini Flash 2.0 API}
+{\href{https://github.com/SulthanZahran91}{GitHub}}
+{}
+\resumeItemListStart
+    \resumeItem{Built end-to-end pipeline automating extraction of structured financial data from 500+ SEC documents (75,000+ total pages) for academic research}
+    \resumeItem{Integrated web scraping, LLM-powered parsing, and structured output validation, reducing months of manual work to overnight batch processing}
+\resumeItemListEnd
+
+\resumeProject
+{BMKG Sensor Network Monitoring System}
+{Flask, React, Geospatial Visualization}
+{\href{https://github.com/SulthanZahran91}{GitHub}}
+{}
+\resumeItemListStart
+    \resumeItem{Real-time monitoring system with map-based visualization for Indonesian meteorological agency (BMKG) displaying sensor status across geographic regions}
+    \resumeItem{Deployed for operational use enabling rapid identification of sensor failures and network health assessment through geographic awareness}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+\section{\textbf{Technical Skills}}
+\vspace{-0.4mm}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Industrial Systems \& Automation: }{AMHS (Automated Material Handling Systems), MES (Manufacturing Execution Systems), RTD (Real-Time Dispatch), WMS, AGV Integration, PLC Programming (Schneider), HMI Design, Control Systems} \\
+     \vspace{1mm}
+     \textbf{Programming \& Data Engineering: }{Python (Pandas, NumPy, Flask), C\#, SQL (SQL Server, MySQL), MATLAB, C/C++, PowerShell} \\
+     \vspace{1mm}
+     \textbf{Data Processing \& Analysis: }{ETL Pipeline Development, Large-scale Data Processing, LLM Integration (LangChain), Web Scraping (BeautifulSoup), Data Visualization} \\
+     \vspace{1mm}
+     \textbf{Tools \& Platforms: }{Git, Docker, Linux, PyQt, WPF, React, MATLAB App Designer, Embedded Systems (Arduino)} \\
+     \vspace{1mm}
+     \textbf{Process Optimization: }{System Bottleneck Analysis, Performance Optimization, Logistics Algorithm Development}
+    }}
+\end{itemize}
+\vspace{-5mm}
+
+\section{\textbf{Education}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Universitas Indonesia}{Depok, Indonesia}
+{Bachelor of Science in Instrumentation Physics}{2019 - 2023}
+\resumeItemListStart
+\resumeItem{\textbf{Thesis:} Developed Arduino-based automated probe system integrating external ADC and stepper motor control for precision data acquisition}
+\resumeItem{\textbf{Relevant Coursework:} Control Systems, Embedded Systems, Digital Signal Processing, Statistics, Computational Physics}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\end{document}

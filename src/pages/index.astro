@@ -85,6 +85,33 @@ const otherProjects = [
 	}
 ];
 
+const experiences = [
+	{
+		company: 'LG Sinarmas Technology Solutions',
+		role: 'Smart Factory Integrator (AMHS)',
+		location: 'Karawang, Indonesia',
+		period: 'Apr 2024 - Present',
+		highlights: [
+			'Selected as one of four engineers for a two-month deployment to South Korea, leading AMHS subsystem integration testing for two new LG ENSOL Ochang facilities.',
+			'Ran end-to-end validation of AMHS-AGV flows linking real-time dispatch, material control systems, and conveyor infrastructure built on an OpenTCS architecture.',
+			'Surfaced and resolved more than 15 integration issues prior to go-live, preventing production delays.',
+			'Built Python and SQL Timing Diagram Analyzer that digests 100MB log files to shrink incident diagnosis from hours to minutes.',
+			'Developed logistics algorithms that orchestrate thousands of concurrent material moves across eight production lines in a 24/7 battery plant.',
+			'Introduced tooling upgrades including version control automation and static analysis, raising code quality for a 10 person engineering team.'
+		]
+	},
+	{
+		company: 'Universitas Indonesia - FAAN Laboratory',
+		role: 'Research Assistant',
+		location: 'Jakarta, Indonesia',
+		period: 'Oct 2023 - Mar 2024',
+		highlights: [
+			'Built a real-time spectroscopy analysis application in MATLAB App Designer for laboratory researchers.',
+			'Implemented signal processing pipelines and automated curve fitting for high resolution spectral datasets.'
+		]
+	}
+];
+
 const skills = [
 	'Automated Material Handling Systems (AMHS)',
 	'Real-Time Dispatch (RTD)',
@@ -198,6 +225,33 @@ const skills = [
 									View on GitHub &rarr;
 								</a>
 							</div>
+						</article>
+					))}
+				</div>
+			</section>
+
+			<section id="experience" class="experience">
+				<div class="section-header">
+					<h2>Work Experience</h2>
+					<span class="section-rule" aria-hidden="true"></span>
+				</div>
+				<div class="experience-list">
+					{experiences.map((job) => (
+						<article class="experience-card">
+							<div class="experience-meta">
+								<h3>{job.role}</h3>
+								<div class="experience-company">{job.company}</div>
+								<div class="experience-details">
+									<span>{job.location}</span>
+									<span aria-hidden="true">&middot;</span>
+									<span>{job.period}</span>
+								</div>
+							</div>
+							<ul class="experience-highlights">
+								{job.highlights.map((point) => (
+									<li>{point}</li>
+								))}
+							</ul>
 						</article>
 					))}
 				</div>
@@ -461,6 +515,63 @@ const skills = [
 		font-size: 0.75rem;
 		padding: 0.2rem 0.6rem;
 	}
+	.experience {
+		background: var(--color-surface);
+		border-radius: 24px;
+		padding-left: var(--layout-padding);
+		padding-right: var(--layout-padding);
+	}
+	.experience-list {
+		display: grid;
+		gap: clamp(2rem, 5vw, 3rem);
+	}
+	.experience-card {
+		background: #ffffff;
+		border-radius: 18px;
+		border: 1px solid var(--color-divider);
+		box-shadow: var(--shadow-soft);
+		padding: clamp(2rem, 5vw, 2.5rem);
+		display: grid;
+		gap: 1.5rem;
+	}
+	.experience-meta h3 {
+		margin: 0 0 0.5rem;
+		font-size: 1.35rem;
+	}
+	.experience-company {
+		font-weight: 600;
+		color: var(--color-primary);
+		margin-bottom: 0.35rem;
+	}
+	.experience-details {
+		display: inline-flex;
+		gap: 0.65rem;
+		font-size: 0.95rem;
+		color: var(--color-text-muted);
+		flex-wrap: wrap;
+	}
+	.experience-highlights {
+		margin: 0;
+		padding-left: 1.25rem;
+		list-style: none;
+		display: grid;
+		gap: 0.75rem;
+	}
+	.experience-highlights li {
+		position: relative;
+		color: var(--color-text);
+		padding-left: 1rem;
+	}
+	.experience-highlights li::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0.55rem;
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background: var(--color-primary);
+	}
 	.skills {
 		text-align: center;
 	}
@@ -517,6 +628,7 @@ const skills = [
 			flex-direction: column;
 		}
 		.project-media {
+			flex: 0 1 auto;
 			width: 100%;
 		}
 	}
@@ -540,10 +652,26 @@ const skills = [
 		.other-projects {
 			padding: var(--section-spacing) var(--layout-padding);
 		}
+		.experience {
+			padding: var(--section-spacing) var(--layout-padding);
+			border-radius: 18px;
+		}
+		.experience-card {
+			padding: 1.75rem;
+		}
+		.experience-highlights {
+			padding-left: 1rem;
+		}
 	}
 	@media (max-width: 640px) {
 		.other-grid {
 			grid-template-columns: 1fr;
+		}
+		.experience-card {
+			padding: 1.5rem;
+		}
+		.experience-details {
+			gap: 0.4rem;
 		}
 	}
 </style>
