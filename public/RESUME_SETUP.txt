@@ -1,0 +1,24 @@
+Resume Setup Required
+===================
+
+To enable resume downloads on your portfolio, you need to compile the LaTeX resume to PDF:
+
+1. Install LaTeX (if not already installed):
+
+   Ubuntu/Debian:
+   sudo apt install texlive-latex-base texlive-fonts-recommended texlive-latex-extra
+
+   macOS:
+   brew install --cask mactex
+
+2. Compile the resume:
+   npm run build:resume
+
+   Or manually:
+   cd resume && ./build.sh
+
+3. The PDF will be automatically copied to public/resume.pdf
+
+4. Delete this file (RESUME_SETUP.txt) after setup is complete
+
+See resume/README.md for more details.
