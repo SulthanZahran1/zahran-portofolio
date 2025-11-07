@@ -1,0 +1,143 @@
+% !TEX program = pdflatex
+\documentclass[11pt,a4paper]{article}
+
+% ---------- Packages ----------
+\usepackage[margin=1.7cm]{geometry}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+
+% ---------- Colors & Links ----------
+\definecolor{linkblue}{RGB}{0,80,180}
+\hypersetup{colorlinks=true, urlcolor=linkblue, linkcolor=linkblue}
+
+% ---------- Section Formatting ----------
+\titleformat{\section}{\large\bfseries}{}{}{}[\vspace{0.25em}\titlerule]
+\titlespacing{\section}{0pt}{6pt}{6pt}
+\setlist[itemize]{leftmargin=1.2em, itemsep=2pt, topsep=2pt}
+
+% ---------- Utilities ----------
+\newcommand{\sep}{\textcolor{gray}{\textbar}\,}
+\newcommand{\smallgray}[1]{{\small\textcolor{gray}{#1}}}
+\newcommand{\projtag}[1]{\smallgray{\,[#1]}}
+
+% =========================================
+\begin{document}
+
+% ---------- Header ----------
+\begin{center}
+{\LARGE \textbf{Sulthan Zahran Ma'ruf}}\\[2pt]
+\small
+\end{center}
+
+% % ---------- Research Interests ----------
+% \section*{Research Interests}
+% \small
+% \textbf{Smart Factory \& Intralogistics:} automated material handling systems (AMHS), dispatching and vehicle coordination, bottleneck analysis, discrete-event systems. \\
+% \textbf{Optimization / OR:} production scheduling (flow/job shop), resource allocation, queueing, MIP/LP, combinatorial optimization, Pyomo/OR-Tools. \\
+
+
+% ---------- Education (degree only; GPA omitted) ----------
+\section*{Education}
+\textbf{University of Indonesia} \hfill 2019 -- 2023 \\
+B.Sc. in Physics (Instrumentation Physics Concentration). GPA: 3.15/4.00 \\\textit{Thesis:} Arduino-based automated probe with external ADC and stepper motors for precision data acquisition.
+
+% ---------- Profile ----------
+\section*{Profile}
+AMHS Software Engineer in LG Energy Solution Smart Factory. I mainly worked on Integration, Testing and Development based on Factory Floor problems. My current main system is AMHS subsystem that controls the routing and movement of AGV/AMR, while taking orders from higher system (dispatching subsystem, MES, etc).
+
+% job moves where/when) and build tooling that explains why transport decisions happened, working end-to-end from factory software to equipment interfaces. Targeting research on multi-robot coordination and factory layout/scheduling optimization.
+
+% ---------- Industry Experience ----------
+\section*{Industry Experience}
+\textbf{Smart Factory / AMHS Software Engineer} — LG Sinarmas Technology Solutions \hfill Karawang, Indonesia \\
+\emph{End-to-end material transport: dispatching logic, equipment interface, diagnostics} \hfill Apr 2024 -- Present
+\begin{itemize}
+  \item Maintain and improve dispatching logic that routes materials across \textbf{8 production lines} in a 24/7 battery plant.
+  \item Integrate, testing, and maintain the equipment interface layer (messages to AGVs/stockers/conveyors; \textit{SECS/GEM} protocol) to ensure reliable handshakes and timing.
+  \item Worked on and prototype 8+ internal apps that helps the business process of smart factory, 2 of which ended up being used consistently (more on Selected Projects)
+  \item First member in Automation/Logistics Development team; contributed to onboarding everyone as the team grew from \textbf{1 $\rightarrow$ 12+}.
+\end{itemize}
+
+\textbf{AMHS Integration Project (AGV focus)} — LG Energy Solution, Ochang (South Korea) \hfill Aug -- Oct 2025
+\begin{itemize}
+  \item Assisted integration tests for AMHS for AGVs, conveyors, and stockers. Mainly on AGV.
+  \item Found and resolved \textbf{15+} issues pre-production; produced checklists and diagnostic scripts for local teams.
+\end{itemize}
+
+\textbf{Instrumentation Project (Freelance)} — PT Polychemie Asia Pacific Permai \hfill Jan -- Mar 2024
+\begin{itemize}
+  \item Prototyped PC-based data acquisition for temperature/flow in a manual factory (Arduino + custom GUI).
+  \item Demonstrated feasibility and long-term cost savings; presented to owner; delivered working prototype and plan.
+\end{itemize}
+
+\textbf{PLC Programmer Intern} — PT Sugitama Intiarto \hfill Jun -- Jul 2022
+\begin{itemize}
+  \item Programmed ladder logic for cream spreading/stacking/stamping machine; designed HMI.
+  \item Deployed PLC logic to production machine; delivered initial HMI (later modified by client).
+\end{itemize}
+\pagebreak
+% ---------- Research & Teaching ----------
+\section*{Research \& Teaching}
+\textbf{Research Assistant} — FAAN Laboratory, Universitas Indonesia  \hfill Oct 2023 -- Mar 2024
+\begin{itemize}
+  \item Built MATLAB App Designer tool for real-time spectroscopic analysis (peak detection/fitting, Tauc plots).
+  \item Enabled time-evolution studies of spectral peaks; tool adopted in lab workflow.
+\end{itemize}
+  % \phantom{ a} \\
+  % \phantom{b} \\
+  % \phantom{c} \\
+\textbf{Laboratory Assistant (Control Systems \& Digital Electronics)} — Universitas Indonesia \hfill Aug 2022 -- Jun 2024
+\begin{itemize}
+  \item Wrote weekly modules (PID tuning, IC/FPGA) and guided hands-on sessions with scopes, multimeters, and safety in handling sources.
+  \item Mentored students on final projects; emphasized experimental design and reproducibility.
+\end{itemize}
+
+% ---------- Earlier Robotics Work ----------
+\section*{Earlier Robotics Work}
+\textbf{Programming PIC/Electrical Staff} — Tim Robotika Universitas Indonesia \hfill Jun 2020 -- Aug 2021
+\begin{itemize}
+  \item Line follower robot programming and digital-twins arena with integrated cameras.
+  \item Built foundations in embedded control and robotics system integration.
+\end{itemize}
+
+% ---------- Selected Projects ----------
+\section*{Personal Projects}
+\textbf{PLC Log Analyzer} \projtag{Python, \textbf{PyQt}, SQL, parsing/visualization} \hfill used in factory
+\begin{itemize}
+  \item Single tool that parses large AMHS/PLC logs and renders timing views to show event causality and \emph{why} a move/decision occurred.
+  \item \textbf{Scale/perf:} handles 100MB+ logs; \textbf{4,120,953 entries in 104.03s}. Reduced incident diagnosis from hours/days to minutes.
+  \item Public core (PyQt visualization): \href{https://github.com/SulthanZahran91/plc_to_wavedrom}{github.com/SulthanZahran91/plc\_to\_wavedrom}.
+\end{itemize}
+
+\textbf{IoT Sensor Monitoring Automation} \projtag{JavaScript, scraping} \hfill used in factory
+\begin{itemize}
+  \item Automated checks across sensor web UIs for 8+ Energy Solution Site. \textbf{Human effort: 3h $\rightarrow$ 15m} per cycle (\textbf{36 person-hours saved/cycle} for a 12-person team).
+\end{itemize}
+
+% ---------- Technical Skills ----------
+\section*{Technical Skills}
+\textbf{Smart factory:} AMHS (material transport in factories), AGVs, equipment interfacing, PLC/HMI (Schneider). \\
+\textbf{Programming:} Python (Pandas/NumPy, parsing, CLI tools), PyQt, C\# (WPF), SQL, MATLAB, C/C++, JavaScript, PowerShell. \\
+\textbf{Data/tooling:} large-log processing, ETL, scraping, dashboards; Git; Linux/Windows; Docker. \\
+\textbf{Protocols:} SECS/GEM (semiconductor/factory equipment messaging), OPC-UA, TCP/IP.
+
+% ---------- Certifications ----------
+\section*{Certifications (selected)}
+MITx CTL.SC0x Supply Chain Analytics \\
+ Numerical Optimization and Operations Research in Python \\
+Google Cloud Big Data \& ML Fundamentals \\
+Introduction to Data Analytics \\
+Introduction to TensorFlow for AI/ML/DL
+
+
+% ---------- Languages ----------
+\section*{Languages}
+English (IELTS 7.5) \sep Indonesian (native)
+
+
+\end{document}
