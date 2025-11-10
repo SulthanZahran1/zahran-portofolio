@@ -1,0 +1,123 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "404: Page Not Found";
+const description = "The page you're looking for doesn't exist.";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+	</head>
+	<body>
+		<Header />
+		<main class="error-main">
+			<div class="error-content">
+				<h1 class="error-code">404</h1>
+				<h2 class="error-title">Page Not Found</h2>
+				<p class="error-message">
+					The page you're looking for doesn't exist or has been moved.
+				</p>
+				<div class="error-actions">
+					<a href="/" class="btn btn-primary">Go Home</a>
+					<a href="/#projects" class="btn btn-secondary">View Projects</a>
+				</div>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.error-main {
+		min-height: calc(100vh - 200px);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 4rem var(--layout-padding);
+	}
+
+	.error-content {
+		text-align: center;
+		max-width: 600px;
+	}
+
+	.error-code {
+		font-size: clamp(6rem, 15vw, 10rem);
+		font-weight: 700;
+		color: var(--color-primary);
+		line-height: 1;
+		margin: 0;
+		opacity: 0.1;
+	}
+
+	.error-title {
+		font-size: clamp(2rem, 5vw, 3rem);
+		font-weight: 700;
+		margin: -2rem 0 1rem;
+		color: var(--color-code);
+	}
+
+	.error-message {
+		font-size: 1.125rem;
+		color: var(--color-text-muted);
+		margin-bottom: 2.5rem;
+		line-height: 1.6;
+	}
+
+	.error-actions {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.btn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0.75rem 2rem;
+		border-radius: 6px;
+		font-weight: 500;
+		text-decoration: none;
+		transition: all 0.2s ease;
+		font-size: 1rem;
+	}
+
+	.btn-primary {
+		background: var(--color-primary);
+		color: white;
+	}
+
+	.btn-primary:hover,
+	.btn-primary:focus-visible {
+		background: #1d4ed8;
+		transform: translateY(-1px);
+	}
+
+	.btn-secondary {
+		background: transparent;
+		color: var(--color-primary);
+		border: 1px solid var(--color-primary);
+	}
+
+	.btn-secondary:hover,
+	.btn-secondary:focus-visible {
+		background: rgba(37, 99, 235, 0.05);
+		transform: translateY(-1px);
+	}
+
+	@media (max-width: 640px) {
+		.error-actions {
+			flex-direction: column;
+			width: 100%;
+		}
+
+		.btn {
+			width: 100%;
+		}
+	}
+</style>
