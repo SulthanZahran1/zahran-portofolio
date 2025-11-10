@@ -150,20 +150,6 @@ const skills = [
 					<p class="hero-tagline">
 						I bridge the gap between PLC/control systems and modern software engineering—solving automation problems that stump pure CS engineers through deep understanding of both physical constraints and software architecture.
 					</p>
-					<div class="hero-stats">
-						<div class="stat">
-							<span class="stat-value">36+ hours</span>
-							<span class="stat-label">Saved per cycle</span>
-						</div>
-						<div class="stat">
-							<span class="stat-value">8+ tools</span>
-							<span class="stat-label">Self-initiated</span>
-						</div>
-						<div class="stat">
-							<span class="stat-value">1000s</span>
-							<span class="stat-label">Daily material moves</span>
-						</div>
-					</div>
 					<div class="hero-actions">
 						<a class="btn btn-primary" href="#projects">View Projects</a>
 						<a class="btn btn-secondary" href="/resume.pdf" download="Sulthan_Zahran_Resume.pdf">
@@ -379,35 +365,6 @@ const skills = [
 		color: var(--color-text);
 		margin: 0 auto 2rem;
 		max-width: 48ch;
-	}
-	.hero-stats {
-		display: flex;
-		justify-content: center;
-		gap: 3rem;
-		margin: 2.5rem auto;
-		padding: 2rem;
-		border-radius: 12px;
-		background: rgba(37, 99, 235, 0.05);
-		border: 1px solid rgba(37, 99, 235, 0.15);
-		max-width: 600px;
-	}
-	.stat {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 0.5rem;
-	}
-	.stat-value {
-		font-family: "JetBrains Mono", monospace;
-		font-size: 1.75rem;
-		font-weight: 700;
-		color: var(--color-primary);
-		line-height: 1;
-	}
-	.stat-label {
-		font-size: 0.8rem;
-		color: var(--color-text-muted);
-		text-align: center;
 	}
 	.hero-actions {
 		margin-top: 2rem;
@@ -740,16 +697,6 @@ const skills = [
 		}
 	}
 	@media (max-width: 768px) {
-		.hero-stats {
-			gap: 2rem;
-			padding: 1.5rem;
-		}
-		.stat-value {
-			font-size: 1.5rem;
-		}
-		.stat-label {
-			font-size: 0.75rem;
-		}
 		.hero-actions {
 			flex-direction: column;
 			width: 100%;
@@ -776,11 +723,6 @@ const skills = [
 		}
 	}
 	@media (max-width: 640px) {
-		.hero-stats {
-			flex-direction: column;
-			gap: 1.5rem;
-			padding: 1.5rem;
-		}
 		.other-grid {
 			grid-template-columns: 1fr;
 		}
